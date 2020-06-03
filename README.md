@@ -1,3 +1,3 @@
-# Reinforcement-Learning
+# OpenAI GYM'S LUNAR LANDER 
 
-CartPole 
+Requirements
