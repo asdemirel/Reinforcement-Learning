@@ -118,7 +118,6 @@ while True:
     next_state, reward, done, _ = env.step(action)
     next_state = np.reshape(next_state, [1,env.observation_space.shape[0]])
     state = next_state
-#    time.sleep(0.8)
     if done:
         env.close()
         break
