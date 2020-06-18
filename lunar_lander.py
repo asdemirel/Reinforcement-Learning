@@ -8,7 +8,6 @@ from collections import deque
 class DQLAgent:
     
     def __init__(self, env):
-        
         self.state_size = env.observation_space.shape[0]
         self.action_size = env.action_space.n
         
@@ -106,15 +105,15 @@ if __name__ == "__main__":
         agent.adaptiveEGreedy()
 
         # Running average of past 100 episodes
-        print('Episode: {}, Reward: {}'.format(e,total_reward))     
-    
+        print('Episode: {}, Reward: {}'.format(e,total_reward))
+      
 # %% test
 import time
 trained_model = agent
 state = env.reset()
 state = np.reshape(state, [1, env.observation_space.shape[0]])
 while True:
-    env.render()
+    env.render()  
     action = trained_model.act(state)
     next_state, reward, done, _ = env.step(action)
     next_state = np.reshape(next_state, [1,env.observation_space.shape[0]])
